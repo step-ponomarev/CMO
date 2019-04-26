@@ -1,6 +1,6 @@
 unit iface_;
 interface
-uses graph, crt, func_, graphic_;
+uses func_, graphic_, graph, crt,;
 
 type
 globalMenu = object
