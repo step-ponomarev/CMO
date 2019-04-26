@@ -62,28 +62,23 @@ begin
   setColor(yellow);
   OutTextXY(80, yPos, 'Help');
 
-  delay(1000);
   setTextStyle(0, 0 , 2);
   setColor(White);
   OutTextXY(50, 160, 'KMIN - The minimum number of gene-');
   OutTextXY(50, 180, 'rated requests from each source.');
 
-  delay(1000);
   setColor(red);
   OutTextXY(50, 210, 'LAM(x) - The intensity of genera-');
   OutTextXY(50, 230, 'ting requests from the source.');
 
-  delay(1000);
   setColor(green);
   OutTextXY(50, 260, 'P(x) - The probability of failure');
   OutTextXY(50, 280, 'in lambda.');
 
-  delay(1000);
   setColor(lightRed);
   OutTextXY(50, 310, 'K(x) - The employment rate of the');
   OutTextXY(50, 330, 'device by the source.');
 
-  delay(1000);
   setColor(lightGreen);
   OutTextXY(50, 360, 'M(x) - Average service time from ');
   OutTextXY(50, 380, 'source.');
@@ -94,10 +89,8 @@ begin
   begin
     setColor(Green);
     OutTextXY(500, 410, 'OK');
-    delay(5000);
     setColor(Red);
     OutTextXY(500, 410, 'OK');
-    delay(5000);
     setColor(Yellow);
     OutTextXY(500, 410, 'OK');
     key := readkey;
@@ -126,8 +119,6 @@ begin
         SetFillStyle(1, lightGreen);
         FloodFill(90,yPos + 90, Green);
 
-        delay(1000);
-
         setColor(Red);
         setLineStyle(0, 0, 3);
         line(80, yPos + 90, 100, yPos + 100);
@@ -146,8 +137,6 @@ begin
         line(297, yPos + 80, 292, yPos + 90);
         SetFillStyle(1, lightGreen);
         FloodFill(310,yPos + 90, Green);
-
-        delay(1000);
 
         setColor(Red);
         setLineStyle(0, 0, 3);
@@ -171,8 +160,6 @@ begin
         SetFillStyle(1, lightGreen);
         FloodFill(90,yPos + 150, Green);
 
-        delay(1000);
-
         setColor(Red);
         setLineStyle(0, 0, 3);
         line(80, yPos + 150, 100, yPos + 160);
@@ -191,8 +178,6 @@ begin
         line(297, yPos + 140, 292, yPos + 150);
         SetFillStyle(1, lightGreen);
         FloodFill(310,yPos + 150, Green);
-
-        delay(1000);
 
         setColor(Red);
         setLineStyle(0, 0, 3);
@@ -216,8 +201,6 @@ begin
         SetFillStyle(1, lightGreen);
         FloodFill(90,yPos + 210, Green);
 
-        delay(1000);
-
         setColor(Red);
         setLineStyle(0, 0, 3);
         line(80, yPos + 210, 100, yPos + 220);
@@ -236,8 +219,6 @@ begin
         line(232, yPos + 200, 227, yPos + 210);
         SetFillStyle(1, lightGreen);
         FloodFill(242,yPos + 210, Green);
-
-        delay(1000);
 
         setColor(Red);
         setLineStyle(0, 0, 3);
@@ -600,7 +581,6 @@ begin
   setColor(yellow);
   OutTextXY(80, yPos, 'Options');
 
-  delay(1000);
   setTextStyle(0, 0 , 3);
   setColor(green);
   OutTextXY(120, yPos + 80, 'LAM(P1)');
@@ -608,21 +588,18 @@ begin
   str(LAM[1]:0:1, cStr);
   OutTextXY(430, yPos + 80, cStr);
 
-  delay(1000);
   setColor(Red);
   OutTextXY(120, yPos + 140, 'LAM(P3)');
   setColor(lightRed);
   str(LAM[3]:0:1, cStr);
   OutTextXY(430, yPos + 140, cStr);
 
-  delay(1000);
   setColor(white);
   OutTextXY(120, yPos + 200, 'KMIN');
   setColor(white);
   str(amount, cStr);
   OutTextXY(430, yPos + 200, cStr);
 
-  delay(1000);
   setColor(Yellow);
   OutTextXY(260, yPos + 270, 'Save');
 
@@ -765,10 +742,10 @@ begin
         setTextStyle(0, 0, 3);
         setColor(Black);
         OutTextXY(260, yPos + 270, 'Save');
-        delay(100);
+
         setColor(yellow);
         OutTextXY(260, yPos + 260, 'Save');
-        delay(100);
+
         setColor(green);
         OutTextXY(260, yPos + 260, 'Save');
 
@@ -860,10 +837,10 @@ begin
         setFillStyle(solidFill, black);
         setColor(black);
         OutTextXY(260, yPos + 260, 'Save');
-        delay(100);
+
         setColor(green);
         OutTextXY(260, yPos + 270, 'Save');
-        delay(100);
+
         setColor(yellow);
         OutTextXY(260, yPos + 270, 'Save');
 
@@ -924,8 +901,6 @@ begin
   setColor(Green);
   OutTextXY(120, 190, 'Graph');
 
-  delay(1000);
-
   setColor(lightred);
   strDot := 'Dot Graph';
   strDia := 'Diagrame';
@@ -979,10 +954,10 @@ begin
               setColor(black);
               setTextStyle(0, 0 , 3);
               OutTextXY(160, 270, 'Dot Graph');
-              delay(100);
+
               setColor(lightRed);
               OutTextXY(160, 260, 'Dot Graph');
-              delay(100);
+
               setColor(lightGreen);
               OutTextXY(160, 260, 'Dot Graph');
             end;
@@ -990,10 +965,10 @@ begin
               setColor(black);
               setTextStyle(0, 0 , 3);
               OutTextXY(160, 350, 'Diagrame');
-              delay(100);
+
               setColor(lightRed);
               OutTextXY(160, 340, 'Diagrame');
-              delay(100);
+
               setColor(lightGreen);
               OutTextXY(160, 340, 'Diagrame');
             end;
@@ -1004,10 +979,10 @@ begin
               setColor(black);
               setTextStyle(0, 0 , 3);
               OutTextXY(160, 260, 'Dot Graph');
-              delay(100);
+
               setColor(lightGreen);
               OutTextXY(160, 270, 'Dot Graph');
-              delay(100);
+
               setColor(lightred);
               OutTextXY(160, 270, 'Dot Graph');
             end;
@@ -1015,10 +990,10 @@ begin
               setColor(black);
               setTextStyle(0, 0 , 3);
               OutTextXY(160, 340, 'Diagrame');
-              delay(100);
+
               setColor(lightGreen);
               OutTextXY(160, 350, 'Diagrame');
-              delay(100);
+
               setColor(lightRed);
               OutTextXY(160, 350, 'Diagrame');
             end;
@@ -1073,8 +1048,6 @@ begin
   setTextStyle(0, 0 , 3);
   OutTextXY(80, 110, 'Results');
 
-  delay(1000);
-
   strGraph := 'Graph';
   strTable := 'Table';
   titles[1] := '';
@@ -1085,16 +1058,13 @@ begin
   begin
     titles[1] := titles[1] + strGraph[i];
     OutTextXY(120, 190, titles[1]);
-    delay(500);
     Inc(i);
   end;
   i := 1;
-  delay(300);
   while (i <= length(strTable)) do
   begin
     titles[2] := titles[2] + strTable[i];
     OutTextXY(120, 270, titles[2]);
-    delay(500);
     Inc(i);
   end;
 end;
@@ -1157,23 +1127,19 @@ begin
           1 : begin
             setColor(black);
             OutTextXY(120, yPos + 80, 'Graph');
-            delay(100);
             setColor(lightGreen);
             OutTextXY(120, yPos + 70, 'Graph');
             setColor(Yellow);
             setTextStyle(0, 0 , 2);
-            delay(100);
             OutTextXY(400, 340, '- Dot Graph');
             OutTextXY(400, 370, '- Diagrame');
           end;
           2 : begin
             setColor(black);
             OutTextXY(120, yPos + 160, 'Table');
-            delay(100);
             setColor(lightGreen);
             OutTextXY(120, yPos + 150, 'Table');
             setTextStyle(0, 0 , 2);
-            delay(100);
             setColor(Yellow);
             OutTextXY(400, 340, '- Result Table');
           end;
@@ -1185,7 +1151,6 @@ begin
           1 : begin
             setColor(black);
             OutTextXY(120, yPos + 70, 'Graph');
-            delay(100);
             setColor(lightred);
             OutTextXY(120, yPos + 80, 'Graph');
           end;
@@ -1247,23 +1212,16 @@ begin
     begin
       strOut := strOut + titles[i][j];
       OutTextXY(80, 110 + (80 * (i - 1)), strOut);
-      if (i = 1) then
-        delay(100)
-      else
-        delay(200);
     end;
   end;
 
   setColor(black);
   OutTextXY(80, 110, 'Start Generation');
-  delay(100);
   setColor(lightRed);
   OutTextXY(80, 100, 'Start Generation');
-  delay(100);
   setColor(lightGreen);
   OutTextXY(80, 100, 'Start Generation');
 
-  delay(100);
   setColor(yellow);
   setTextStyle(0, 0 , 2);
   OutTextXY(400, 340, '- Generation');
@@ -1306,20 +1264,16 @@ begin
                 1 : begin
                   setColor(black);
                   OutTextXY(80, 330, 'Exit');
-                  delay(100);
                   setColor(Red);
                   OutTextXY(80, 320, 'Exit');
-                  delay(100);
                   setColor(Green);
                   OutTextXY(80, 320, 'Exit');
                 end;
                 0 : begin
                   setColor(black);
                   OutTextXY(420, 330, 'Cancel');
-                  delay(100);
                   setColor(Red);
                   OutTextXY(420, 320, 'Cancel');
-                  delay(100);
                   setColor(Green);
                   OutTextXY(420, 320, 'Cancel');
                 end;
@@ -1329,20 +1283,16 @@ begin
                   1 : begin
                     setColor(black);
                     OutTextXY(80, 320, 'Exit');
-                    delay(100);
                     setColor(Green);
                     OutTextXY(80, 330, 'Exit');
-                    delay(100);
                     setColor(Red);
                     OutTextXY(80, 330, 'Exit');
                   end;
                   0 : begin
                     setColor(black);
                     OutTextXY(420, 320, 'Cancel');
-                    delay(100);
                     setColor(Green);
                     OutTextXY(420, 330, 'Cancel');
-                    delay(100);
                     setColor(Red);
                     OutTextXY(420, 330, 'Cancel');
                   end;
@@ -1378,13 +1328,10 @@ begin
             setTextStyle(0, 0 , 3);
             setColor(black);
             OutTextXY(80, 110, 'Start Generation');
-            delay(100);
             setColor(lightRed);
             OutTextXY(80, 100, 'Start Generation');
-            delay(100);
             setColor(lightGreen);
             OutTextXY(80, 100, 'Start Generation');
-            delay(100);
             setColor(Yellow);
             setTextStyle(0, 0 , 2);
             OutTextXY(400, 340, '- Generation');
@@ -1393,13 +1340,10 @@ begin
             setTextStyle(0, 0 , 3);
             setColor(black);
             OutTextXY(80, 190, 'Results');
-            delay(100);
             setColor(lightRed);
             OutTextXY(80, 180, 'Results');
-            delay(100);
             setColor(lightGreen);
             OutTextXY(80, 180, 'Results');
-            delay(100);
             setColor(Yellow);
             setTextStyle(0, 0 , 2);
             OutTextXY(400, 340, '- Graph');
@@ -1409,14 +1353,11 @@ begin
             setTextStyle(0, 0 , 3);
             setColor(black);
             OutTextXY(80, 270, 'Options');
-            delay(100);
             setColor(lightRed);
             OutTextXY(80, 260, 'Options');
-            delay(100);
             setColor(lightGreen);
             OutTextXY(80, 260, 'Options');
             setColor(Yellow);
-            delay(100);
             setTextStyle(0, 0 , 2);
             OutTextXY(400, 340, '- LAM(P1)');
             OutTextXY(400, 370, '- LAM(P3)');
@@ -1426,13 +1367,10 @@ begin
             setTextStyle(0, 0 , 3);
             setColor(black);
             OutTextXY(80, 350, 'Help');
-            delay(100);
             setColor(lightRed);
             OutTextXY(80, 340, 'Help');
-            delay(100);
             setColor(lightGreen);
             OutTextXY(80, 340, 'Help');
-            delay(100);
             setColor(Yellow);
             setTextStyle(0, 0 , 2);
             OutTextXY(400, 340, '- Information');
@@ -1446,10 +1384,8 @@ begin
           setTextStyle(0, 0 , 3);
           setColor(black);
           OutTextXY(80, 100, 'Start Generation');
-          delay(100);
           setColor(lightGreen);
           OutTextXY(80, 110, 'Start Generation');
-          delay(100);
           setColor(lightRed);
           OutTextXY(80, 110, 'Start Generation');
         end;
@@ -1457,10 +1393,8 @@ begin
           setTextStyle(0, 0 , 3);
           setColor(black);
           OutTextXY(80, 180, 'Results');
-          delay(100);
           setColor(lightGreen);
           OutTextXY(80, 190, 'Results');
-          delay(100);
           setColor(lightRed);
           OutTextXY(80, 190, 'Results');
         end;
@@ -1468,10 +1402,8 @@ begin
           setTextStyle(0, 0 , 3);
           setColor(black);
           OutTextXY(80, 260, 'Options');
-          delay(100);
           setColor(lightGreen);
           OutTextXY(80, 270, 'Options');
-          delay(100);
           setColor(lightRed);
           OutTextXY(80, 270, 'Options');
         end;
@@ -1479,10 +1411,10 @@ begin
           setTextStyle(0, 0 , 3);
           setColor(black);
           OutTextXY(80, 340, 'Help');
-          delay(100);
+
           setColor(lightGreen);
           OutTextXY(80, 350, 'Help');
-          delay(100);
+
           setColor(lightRed);
           OutTextXY(80, 350, 'Help');
         end;

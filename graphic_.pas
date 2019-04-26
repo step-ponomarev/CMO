@@ -213,12 +213,9 @@ begin
     if (saver <> LAM[2]) then
     begin
       arrowPush(key);
-      delay(200);
-
       setColor(black);
       OutTextXY(450, 250, cStr);
     end;
-
     setColor(lightGreen);
     str(LAM[2]:0:1, cStr);
     OutTextXY(450, 250, cStr);
@@ -242,12 +239,9 @@ begin
     if (saver <> finalLAM2) then
     begin
       arrowPush(key);
-      delay(200);
-
       setColor(black);
       OutTextXY(450, 350, cStr);
     end;
-
     setColor(lightGreen);
     str(finalLAM2:0:1, cStr);
     OutTextXY(450, 350, cStr);
@@ -261,7 +255,7 @@ begin
     OutTextXY(450, 350, cStr);
 
     finalLAM2 := finalLAM2 + 0.2;
-    
+
     setColor(lightGreen);
     str(finalLAM2:0:1, cStr);
     OutTextXY(450, 350, cStr);
@@ -434,7 +428,6 @@ end;
 
 procedure system_.limited;
 begin
-  delay(100);
   setColor(Red);
   setTextStyle(0, 0 , 2);
   setFillStyle(solidFill, black);
@@ -466,7 +459,6 @@ begin
   setTextStyle(0, 0 , 2);
   OutTextXY(80, 100, 'System:');
 
-  delay(1000);
   setColor(Red);
   setTextStyle(0, 0 , 3);
   strOut := '';
@@ -493,20 +485,16 @@ begin
     end;
   end;
 
-  delay(1000);
   setTextStyle(0, 0 , 3);
   setColor(red);
   OutTextXY(80, 330, 'Exit');
 
-  delay(1000);
   setColor(green);
   OutTextXY(420, 330, 'Cancel');
 
-  delay(100);
   setColor(black);
   OutTextXY(420, 330, 'Cancel');
 
-  delay(100);
   setColor(green);
   OutTextXY(420, 320, 'Cancel');
 
@@ -521,13 +509,11 @@ begin
   setFillStyle(solidFill, Black);
   bar(80, 80, 640, 480);
 
-  delay(1000);
   setColor(Yellow);
   setTextStyle(0, 0 , 2);
   OutTextXY(80, 100, 'System:');
   setTextStyle(0, 0 , 3);
 
-  delay(1000);
   setColor(Green);
   strSuc := 'Success!';
   strOut := '';
@@ -537,8 +523,6 @@ begin
     OutTextXY(220, 125 + 20, strOut);
   end;
 
-
-  delay(1000);
   setTextStyle(0, 0 , 2);
   setColor(lightGreen);
   strings[1] := 'The generation completed and';
@@ -555,24 +539,22 @@ begin
     end;
   end;
 
-  delay(1000);
   setColor(yellow);
   OutTextXY(80, 300 + 20, 'KMIN : ');
   str(amount, strOut);
   OutTextXY(190, 300 + 20, strOut);
 
-  delay(1000);
   setTextStyle(0, 0 , 3);
   setColor(Green);
   OutTextXY(80, 360, 'Press "ENTER"');
-  delay(5000);
+
   setColor(Red);
   OutTextXY(80, 360, 'Press "ENTER"');
   while (readkey <> #13) do
   begin
     setColor(Green);
     OutTextXY(80, 360, 'Press "ENTER"');
-    delay(5000);
+
     setColor(Red);
     OutTextXY(80, 360, 'Press "ENTER"');
   end;
@@ -587,13 +569,11 @@ begin
   setFillStyle(solidFill, Black);
   bar(80, 80, 640, 480);
 
-  delay(1000);
   setColor(Yellow);
   setTextStyle(0, 0 , 2);
   OutTextXY(80, 100, 'System:');
   setTextStyle(0, 0 , 3);
 
-  delay(1000);
   setColor(Red);
   strError := 'Error!';
   strOut := '';
@@ -603,8 +583,6 @@ begin
     OutTextXY(240, 125 + 20, strOut);
   end;
 
-
-  delay(1000);
   strings[1] := 'Missing data. To collect data';
   strings[2] := 'you need to start the generation';
   strings[3] := 'system. Go to the main menu to';
@@ -621,18 +599,17 @@ begin
     end;
   end;
 
-  delay(1000);
   setTextStyle(0, 0 , 3);
   setColor(Green);
   OutTextXY(80, 360, 'Press "ENTER"');
-  delay(5000);
+
   setColor(Red);
   OutTextXY(80, 360, 'Press "ENTER"');
   while (readkey <> #13) do
   begin
     setColor(Green);
     OutTextXY(80, 360, 'Press "ENTER"');
-    delay(5000);
+
     setColor(Red);
     OutTextXY(80, 360, 'Press "ENTER"');
   end;
@@ -880,7 +857,6 @@ end;
 
 procedure otkaz_dot.setDot(KMIN : integer; p : real; numb : integer);
 begin
-  delay(2);
   setColor(getColor(numb));
   putPixel(getX(KMIN), getY(p), getColor(numb));
 end;
