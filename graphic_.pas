@@ -105,7 +105,7 @@ begin
           line(100, 260, 100, 250);
           SetFillStyle(1, lightGreen);
           FloodFill(90, 260, green);
-
+          
           setColor(Red);
           setLineStyle(0, 0, 3);
           line(80, 260, 100, 270);
