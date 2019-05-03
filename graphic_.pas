@@ -10,10 +10,10 @@ coords_ = record
 end;
 
 data = record
-LAM : real;
-POTK : array[1..3] of real;
-KZANP1 : real;
-MOBS2 : real;
+  LAM : real;
+  POTK : array[1..3] of real;
+  KZANP1 : real;
+  MOBS2 : real;
 end;
 
 stackData = array[1..11] of data;
@@ -57,10 +57,11 @@ end;
 
 table = object
   CacheData : stackData;
+  n_ : integer;
   used : integer;
   procedure drawTable;
   procedure error;
-  procedure getData(cache : stackData);
+  procedure getData(cache : stackData; n : integer);
 end;
 
 LAMpanel = object
@@ -105,7 +106,7 @@ begin
           line(100, 260, 100, 250);
           SetFillStyle(1, lightGreen);
           FloodFill(90, 260, green);
-          
+
           setColor(Red);
           setLineStyle(0, 0, 3);
           line(80, 260, 100, 270);
@@ -623,7 +624,7 @@ var
 begin
   if used = 1 then
   begin
-    for i := 1 to 11 do
+    for i := 1 to n_ do
     begin
       setColor(yellow);
       setTextStyle(0, 0 , 2);
@@ -638,6 +639,7 @@ begin
       OutTextXY(425, 90, 'K(1)');
       setColor(yellow);
       OutTextXY(530, 90, 'M(2)');
+
       with CacheData[i] do
       begin
         setColor(yellow);
@@ -674,8 +676,9 @@ begin
   end;
 end;
 
-procedure table.getData(cache : stackData);
+procedure table.getData(cache : stackData; n : integer);
 begin
+  n_ := n;
   CacheData := cache;
   used := 1;
 end;

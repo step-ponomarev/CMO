@@ -230,6 +230,7 @@ begin
   s1.Init;
   s[2].Init;
   s[3].Init;
+
   n := 0;
 
   while (LAM[2] < (finalLAM2 + 0.1)) do
@@ -243,6 +244,7 @@ begin
       newRequest(requests, i, s1, s);
     newNMIN(NMIN);
     Inc(n);
+
     while (s1.KMIN <= amount) or (s[2].KMIN <= amount) or (s[3].KMIN <= amount) do
     begin
       if ((lam[2] > (finalLAM2 - 0.1)) and (mode = 2)) then
@@ -387,7 +389,7 @@ begin
     LAM[2] := LAM[2] + 0.2;
   end;
 
-  tab.getData(cache);
+  tab.getData(cache, n);
 
   if (mode <> 0) then
     while (readkey <> #13) do
