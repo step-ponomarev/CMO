@@ -1452,6 +1452,7 @@ begin
   LAM[2] := 1;
   LAM[3] := 1;
   finalLAM2 := 3;
+  det := 0.2;
   refreshCMO;
   while (exit <> 1) do
   begin
