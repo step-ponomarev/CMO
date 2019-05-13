@@ -82,6 +82,7 @@ graph2 : otkaz_dot;
 LAM : array[1..3] of real;
 LAMpan : LAMpanel;
 finalLAM2 : real;
+det : real;
 
 implementation
 const
@@ -208,8 +209,8 @@ begin
 
     if LAM[2] <= 1 then
       LAM[2] := 1;
-    if LAM[2] >= 2.8 then
-      LAM[2] := 2.8;
+    if LAM[2] >= (finalLAM2 - 1) then
+      LAM[2] := (finalLAM2 - 1);
 
     if (saver <> LAM[2]) then
     begin
@@ -232,10 +233,8 @@ begin
 
     if finalLAM2 <= 1.2 then
       finalLAM2 := 1.2;
-    if finalLAM2 >= 3 then
-      finalLAM2 := 3;
-    if LAM[2] > finalLAM2 then
-      finalLAM2 := finalLAM2 + 0.2;
+    if (LAM[2] + 1) >= finalLAM2 then
+      finalLAM2 := (LAM[2] + 1);
 
     if (saver <> finalLAM2) then
     begin
@@ -248,21 +247,7 @@ begin
     OutTextXY(450, 350, cStr);
   end;
 
-  if LAM[2] > finalLAM2 then begin
-    saver := finalLAM2;
-    str(finalLAM2:0:1, cStr);
-
-    setColor(black);
-    OutTextXY(450, 350, cStr);
-
-    finalLAM2 := finalLAM2 + 0.2;
-
-    setColor(lightGreen);
-    str(finalLAM2:0:1, cStr);
-    OutTextXY(450, 350, cStr);
-  end;
-
-
+  det := (finalLAM2 - LAM[2]) * 0.1;
 end;
 
 procedure LAMpanel.arrowDraw(cacheMode : integer);
@@ -751,14 +736,6 @@ function otkaz_graph.getX(var numb : integer) : integer;
 var
   save : integer;
 begin
-  if (numb = 1) then
-  begin
-    save := round(LAM[2] - 1);
-    if (save <> 0) then
-      numb := round(save / 0.2) + 1
-    else
-      numb := 1;
-  end;
   getX := coords.x + (36 * numb);
 end;
 
@@ -795,7 +772,7 @@ var
   ditX, ditY : real;
   s : string;
 begin
-    ditX := 1.0;
+    ditX := LAM[2];
     ditY := 0.1;
     setColor(white);
     setTextStyle(0, 0 , 1);
@@ -807,7 +784,7 @@ begin
         line(coords.x + 36 * i, coords.y, coords.x + 36 * i, coords.y - 10);
         str(ditX:0:1, s);
         OutTextXY(coords.x - 15 + 36 * i, coords.y + 15, s);
-        ditX := ditX + 0.2;
+        ditX := ditX + det;
       end;
     end;
     setColor(Red);
