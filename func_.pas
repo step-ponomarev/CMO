@@ -205,14 +205,8 @@ begin
   if kOut < 1 then
     inc(kOut);
 
-  if (LAM[2] <> 1.0) then
-  begin
-    delta := 100 div round((LAM[2] - 1.0) / 0.2);
-  end
-  else begin
-    delta := 10;
-  end;
-  progress := 0;
+  progress := -10;
+  delta := 10;
   if (mode = 0) then
   begin
     setColor(lightRed);
@@ -386,7 +380,7 @@ begin
     if (mode = 1) then
       makeGraph(mode, lock);
 
-    LAM[2] := LAM[2] + 0.2;
+    LAM[2] := LAM[2] + det;
   end;
 
   tab.getData(cache, n);
