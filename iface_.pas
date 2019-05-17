@@ -583,13 +583,13 @@ begin
 
   setTextStyle(0, 0 , 3);
   setColor(green);
-  OutTextXY(120, yPos + 80, 'LAM(P1)');
+  OutTextXY(120, yPos + 80, 'LAM(S1)');
   setColor(lightGreen);
   str(LAM[1]:0:1, cStr);
   OutTextXY(430, yPos + 80, cStr);
 
   setColor(Red);
-  OutTextXY(120, yPos + 140, 'LAM(P3)');
+  OutTextXY(120, yPos + 140, 'LAM(S3)');
   setColor(lightRed);
   str(LAM[3]:0:1, cStr);
   OutTextXY(430, yPos + 140, cStr);
@@ -1359,8 +1359,8 @@ begin
             OutTextXY(80, 260, 'Options');
             setColor(Yellow);
             setTextStyle(0, 0 , 2);
-            OutTextXY(400, 340, '- LAM(P1)');
-            OutTextXY(400, 370, '- LAM(P3)');
+            OutTextXY(400, 340, '- LAM(S1)');
+            OutTextXY(400, 370, '- LAM(S3)');
             OutTextXY(400, 400, '- KMIN');
           end;
           4 : begin

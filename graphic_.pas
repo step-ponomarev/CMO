@@ -796,7 +796,7 @@ begin
         ditY := ditY + 0.1;
     end;
     setTextStyle(0, 0 , 3);
-    OutTextXY(coords.x + 190, coords.y - 430, 'P(LAM2)');
+    OutTextXY(coords.x + 160, coords.y - 430, 'f(LAM2, P)');
 end;
 
 constructor otkaz_dot.init(KMIN : integer);
@@ -832,7 +832,7 @@ begin
         ditY := ditY + 0.1;
     end;
     setTextStyle(0, 0 , 3);
-    OutTextXY(coords.x + 190, coords.y - 430, 'P(KMIN)');
+    OutTextXY(coords.x + 160, coords.y - 430, 'f(KMIN, P)');
 end;
 
 procedure otkaz_dot.setDot(KMIN : integer; p : real; numb : integer);
